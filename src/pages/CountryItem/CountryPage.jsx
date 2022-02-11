@@ -3,11 +3,11 @@ import  React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 
 
+
 const CountryPage = () => {
   const params = useParams().iso;
   const [image, setImage] = useState();
-  const [data, setData] = useState('');
-  const[country, setCountry] =useState();
+  const[country, setCountry] =useState()
   const [cases, setCases ] = useState(0);
   const [deaths, setDeaths ] = useState(0);
   const [recovered, setRecovered] = useState (0);
@@ -39,7 +39,7 @@ const CountryPage = () => {
       var x2 = x.length > 1 ? '.' + x[1] : '';
       var rgx = /(\d+)(\d{3})/;
       while (rgx.test(x1)) {
-        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+        x1 = x1.replace(rgx, '$1'  + ',' + '$2');
       }
       return x1 + x2;
     }
@@ -51,10 +51,10 @@ const CountryPage = () => {
         <div className="col-12">
           <div className="d-flex align-items-center justify-content-center">
             <img src={image} alt={country}  className='me-w2'  width="80px"  />
-            <h1>{country}</h1>
+            <h1 className='fw-bold text-uppercase'>{country}</h1>
+            </div>
             <hr/>
-          </div>
-          <div className='col-12 text-center'>
+          <div className='col-12 text-center mt-3'>
                   <h2>Jami Tasdiqlanganlar</h2>
                   <h1 className='text-warning'>{addCommas(cases)}</h1>
                   <h2>Vafot Etganlar</h2>

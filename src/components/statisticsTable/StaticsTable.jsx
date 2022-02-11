@@ -59,7 +59,7 @@ export const StaticsTable = () => {
                   <tr key={index}>
                     <td>{index + 1}</td>
                     <td>
-                      <Link to = {`/country/${item.countryInfo.Iso2}`}>{item.country}</Link>
+                      <Link to = {`/country/${item.countryInfo.iso2}`}>{item.country}</Link>
                     </td>
                     <td>{addCommas(item.cases)}</td>
                     {item.todayCases === 0 ? <td>-</td> : <td className='bg-warning '>{addCommas(item.todayCases)}</td> }

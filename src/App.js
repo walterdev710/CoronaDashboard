@@ -1,4 +1,3 @@
-import {Suspense} from 'react'
 import {Routes, Route} from 'react-router-dom'
 import { Navbar } from "./components/Navbar/Navbar";
 import CountryPage from './pages/CountryItem/CountryPage';
